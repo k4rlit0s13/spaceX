@@ -67,3 +67,20 @@ style.css - El mago Stil, el hechizero encargado de transmutar la apariencia de 
 
 carpetas - cabañas, lugares al lado del hogar donde se resguardan otros hechizeros que prestan hechizos a los magos principales, recursos, pergaminos, etc... de los que pueden hacer uso los magos principales u otros.
 
+
+_________________________________________________________________________________________________________________________________________________________________________________________
+
+Dia 2: 26/JUN/2024
+
+Que hize hoy?
+
+testeo de la API pruebas en mirar si trae correctamente, planeamiento de que poder realizar y como con la API, tomar las claves y hacerlas funcionales de manera dinamica y asi poder
+usarlas facilmente a conveniencia e individualmente.
+_________________________________________________________________________________________________________________________________________________________________________________________
+
+Dia 3: 26/JUN/2024
+
+Que hize hoy?
+
+arreglo y construccion de la funcion de rockets getDetails para ya ser impresa y en ingles ya que los datos son en este idioma
+_________________________________________________________________________________________________________________________________________________________________________________________
