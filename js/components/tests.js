@@ -25,12 +25,12 @@ const API_URL_STARLINK="https://https://api.spacexdata.com/v4/starlink";
 
 
 // HECHIZO DE INVOCACION DE TODOS LOS LANZAMIENTOS EN LA (API) ejemplo con rockets
-    export const getAllLaunches = async() =>{
+    export const getAllData = async() =>{
         let res = await fetch(API_URL_ROCKETS)
         let data = await res.json()
         return data
     }
-    console.log(await getAllLaunches());
+    console.log(await getAllData());
 
 
 // ______________________________________________________________________________________________________________________________________________________________________________//
@@ -118,19 +118,52 @@ const obtenerDatosCohete = async (rocketId) => {
 
 
 // Imprimir dinámicamente en HTML usando innerHTML
-            const rocketDetails = document.getElementById('rocket-details');
-            if (rocketDetails) {
-                rocketDetails.innerHTML = `
-                    <h2>${nombreCohete}</h2>
-                    <p><strong>Descripción:</strong> ${descripción}</p>
-                    <p><strong>País:</strong> ${país}</p>
-                    <p><strong>Compañía:</strong> ${compañía}</p>
-                    <p><strong>Altura (metros):</strong> ${alturaMetros}</p>
-                    <p><strong>Diámetro (metros):</strong> ${diametroMetros}</p>
-                    <p><strong>Masa (kg):</strong> ${masaKG}</p>
-                    <p><strong>Éxito en el lanzamiento (%):</strong> ${tasaÉxito}</p>
-                    <p><strong>Enlace a Wikipedia:</strong> <a href="${enlaceWikipedia}" target="_blank">Link</a></p>
-                    <img src="${imagenFlickr1}" alt="Imagen del cohete ${nombreCohete}" referrerpolicy="no-referrer">
+    const rocketDetails = document.getElementById('rocket-details');
+    if (rocketDetails) {
+        rocketDetails.innerHTML = `
+            <h2>${nombreCohete}</h2>
+            <p><strong>Descripción:</strong> ${descripción}</p>
+            <p><strong>País:</strong> ${país}</p>
+            <p><strong>Compañía:</strong> ${compañía}</p>
+            <p><strong>Altura (metros):</strong> ${alturaMetros}</p>
+            <p><strong>Altura pies:</strong>${alturaPies}</p>
+            <p><strong>Diámetro (metros):</strong> ${diametroMetros}</p>
+            <p><strong>Diametro en pies:</strong>${diametroPies}</p>
+            <p><strong>Masa (kg):</strong> ${masaKG}</p>
+            <p><strong>Masa LB:</strong>${masaLB}</p>
+            <p><strong>Empuje nivel mar:</strong>${empujeNivelMar}</p>
+            <p><strong>Empuje nivel mar Lbf:</strong>${empujeNivelMarLbf}</p>
+            <p><strong>Reutilizable:</strong>${reutilizablePrimeraEtapa}</p>
+            <p><strong>cantidad Motores</strong>${cantidadMotores}</p>
+            <p><strong>cantidadCombustible</strong>${cantidadCombustible}</p>
+            <p><strong>tiempoQuemadoPrimeraEtapa</strong>${tiempoQuemadoPrimeraEtapa}</p>
+            <p><strong>empujeSegundaEtapa</strong>${empujeSegundaEtapa}</p>
+            <p><strong>alturaCofia</strong>${alturaCofia}</p>
+            <p><strong>empujeVacio</strong>${empujeVacio}</p>
+            <p><strong>diametroCofia</strong>${diametroCofia}</p>
+            <p><strong>reutilizableSegundaEtapa</strong>${reutilizableSegundaEtapa}</p>
+            <p><strong>motoresSegundaEtapa</strong>${motoresSegundaEtapa}</p>
+            <p><strong>cantidadCombustibleSegundaEtapa</strong>${cantidadCombustibleSegundaEtapa}</p>
+            <p><strong>tiempoQuemadoSegundaEtapa</strong>${tiempoQuemadoSegundaEtapa}</p>
+            <p><strong>empujeNivelMarMotor</strong>${empujeNivelMarMotor}</p>
+            <p><strong>empujeVacíoMotor</strong>${empujeVacíoMotor}</p>
+            <p><strong>tipoMotor</strong>${tipoMotor}</p>
+            <p><strong>versiónMotor</strong>${versiónMotor}</p>
+            <p><strong>diseñoMotor</strong>${diseñoMotor}</p>
+            <p><strong>propulsante1</strong>${propulsante1}</p>
+            <p><strong>propulsante2</strong>${propulsante2}</p>
+            <p><strong>pesoCargaLEO</strong>${pesoCargaLEO}</p>
+            <p><strong>Éxito en el lanzamiento (%):</strong> ${tasaÉxito}</p>
+            <p><strong>Enlace a Wikipedia:</strong> <a href="${enlaceWikipedia}" target="_blank">Link</a></p>
+            <img src="${imagenFlickr1}"alt="Imagen del cohete ${nombreCohete}" referrerpolicy="no-referrer">
+            <img src="${imagenFlickr2}"alt="Imagen del cohete ${nombreCohete}" referrerpolicy="no-referrer">
+            <p><strong>tipoCohete</strong>${tipoCohete}</p>
+            <p><strong>activo</strong>${activo}</p>
+            <p><strong>etapas</strong>${etapas}</p>
+            <p><strong>impulsores</strong>${impulsores}</p>
+            <p><strong>costoLanzamiento</strong>${costoLanzamiento}</p>
+            <p><strong>primerVuelo</strong>${primerVuelo}</p>
+            <p><strong>idCohete</strong>${idCohete}</p>
                 `;
             } else {
                 console.error('Elemento con ID "rocket-details" no encontrado.');
@@ -149,34 +182,35 @@ const obtenerDatosCohete = async (rocketId) => {
 
 // HECHIZO para obtener todas las IDs de los cohetes y crear botones dinámicos
 const crearGaleriaBotones = async () => {
-    try {
-        const response = await fetch(API_URL_ROCKETS); // formules lanza su encantamiento para buscar información mágica sobre cohetes
-        const data = await response.json(); // formules decodifica la respuesta mágica en un pergamino JSON
+    const response = await fetch(API_URL_ROCKETS); // formules lanza su encantamiento para buscar información mágica sobre cohetes
+    const data = await response.json(); // formules decodifica la respuesta mágica en un pergamino JSON
 
-        console.log('Datos obtenidos para crear botones:', data); // Verifica los datos obtenidos
+    console.log('Datos obtenidos para crear botones:', data); // Verifica los datos obtenidos
 
-        // Crear botones dinámicamente
-        const buttonsContainer = document.getElementById('buttons-container');
-        if (buttonsContainer) {
-            data.forEach((rocket, index) => {
-                const button = document.createElement('button');
-                button.textContent = `${index + 1}`;
-                button.onclick = () => obtenerDatosCohete(rocket.id);
-                buttonsContainer.appendChild(button);
-            });
+    // Crear botones dinámicamente
+    const buttonsContainer = document.getElementById('buttons-container');
+    if (buttonsContainer) {
+        data.forEach((rocket, index) => {
+            const button = document.createElement('button');
+            button.textContent = `${index + 1}`;
+            button.onclick = () => obtenerDatosCohete(rocket.id);
+            buttonsContainer.appendChild(button);
+        });
 
-            // Actualizar el conteo de botones
-            const buttonCountContainer = document.querySelector('#button_container_counts_ID');
-            if (buttonCountContainer) {
-                buttonCountContainer.innerHTML = `Cantidad de botones: ${data.length}`;
-            } else {
-                console.error('Elemento con ID "button_container_counts_ID" no encontrado.');
-            }
+        // Actualizar el conteo de botones
+        const buttonCountContainer = document.querySelector('#button_container_counts_ID');
+        if (buttonCountContainer) {
+            buttonCountContainer.innerHTML = `Cantidad de botones: ${data.length}`;
         } else {
             console.error('Elemento con ID "button_container_counts_ID" no encontrado.');
         }
-    } catch (error) {
-        console.error('Error al obtener las IDs de los cohetes:', error);
+
+        // Invocar la información del primer cohete automáticamente
+        if (data.length > 0) {
+            obtenerDatosCohete(data[0].id); // Invocamos la información del primer cohete
+        }
+    } else {
+        console.error('Elemento con ID "buttons-container" no encontrado.');
     }
 };
 crearGaleriaBotones();
