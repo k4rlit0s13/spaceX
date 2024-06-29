@@ -167,9 +167,9 @@ const getAllDetailDataRockets = async (rocketId) => {
 // El mago invoca al DOM para encontrar la cabaña específica donde se mostrarán los detalles del cohete
             const rocketDetails = document.getElementById('rocket-details');
             if (rocketDetails) {
-                rocketDetails.innerHTML = /*html*/  // El mago conjura el hechizo "innerHTML" para imprimir dinámicamente en el pergamino
+                rocketDetails.innerHTML =  // El mago conjura el hechizo "innerHTML" para imprimir dinámicamente en el pergamino
 
-                `
+                /*html*/`
                 <section class='up'>
                 <h2>${nameRocket}</h2>
                 </section>
@@ -275,7 +275,7 @@ const crearGaleriaBotones = async () => {
 
         const buttonCountContainer = document.querySelector('#button_container_counts_ID');// Localiza el contenedor de conteo de botones en el DOM con otro hechizo de localización
         if (buttonCountContainer) {// Si encuentra el contenedor de conteo de botones...
-            buttonCountContainer.innerHTML = `Cantidad de botones: ${data.length}`;// Escribe en el pergamino el número total de botones creados
+            buttonCountContainer.innerHTML = `buttons count: ${data.length}`;// Escribe en el pergamino el número total de botones creados
         } else {// Si no encuentra el contenedor de conteo de botones...
             console.error('Elemento con ID "button_container_counts_ID" no encontrado.');// Lanza un conjuro de error en la consola
         }
