@@ -84,3 +84,16 @@ Que hize hoy?
 
 arreglo y construccion de la funcion de rockets getDetails para ya ser impresa y en ingles ya que los datos son en este idioma
 _________________________________________________________________________________________________________________________________________________________________________________________
+dia 4 5 6 7: 30/JUN/2024 
+
+Que hize durante estos dias?
+
+se realizaron pruebas y arreglos en el codigo javascript para la correcta obtencion de los datos en caada uno de los HTML
+
+_________________________________________________________________________________________________________________________________________________________________________________________
+
+Dia 8: 1/JUL/2024
+
+Que hize hoy?
+
+se dio todo el enfoque final a revisar que hacia falta con respecto al css y el estilo del diseño de la pagina
