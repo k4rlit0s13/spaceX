@@ -72,10 +72,12 @@ const getAllDetailDatacompanys = async (companyId) => {
                 companyDetails.innerHTML = 
                 /*html*/
                 `
-                <section class='up'>
-                    <h2>${company_name}</h2>
+                <section class='main'>
+                <section class='left'>
+                <img src="../storage/img/spaceXlogo.png">     
                 </section>
-                <img src="../storage/img/spaceXlogo.png">                
+                <section class='right'>
+                <h2>${company_name}</h2>
                 <p><strong>company_address:</strong> ${company_address}</p>
                 <p><strong>company_city:</strong> ${company_city}</p>
                 <p><strong>company_state:</strong> ${company_state}</p>
@@ -95,6 +97,8 @@ const getAllDetailDatacompanys = async (companyId) => {
                 <p><strong>company_cto_propulsion:</strong> ${company_cto_propulsion}</p>
                 <p><strong>company_valuation:</strong> ${company_valuation}</p>
                 <p><strong>company_summary:</strong> ${company_summary}</p>
+                </section>
+                </section>
                 `;
             } else {
                 console.error('Elemento con ID "company-details" no encontrado.');

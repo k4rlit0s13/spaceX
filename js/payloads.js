@@ -112,44 +112,50 @@ const getAllDetailDatapayloads = async (payloadId) => {
                 payloadDetails.innerHTML =  // El mago conjura el hechizo "innerHTML" para imprimir dinámicamente en el pergamino
 
                 /*html*/`
-                <section class='up'>
-                <h2>${payload_name}</h2>
+                <section class='main'>
+                <section class='left'>
+                    <h2>${payload_name}</h2>
+                    <p><strong>payload_dragon_capsule:</strong> ${payload_dragon_capsule}</p>
+                    <p><strong>payload_dragon_mass_returned_kg:</strong> ${payload_dragon_mass_returned_kg}</p>
+                    <p><strong>payload_dragon_mass_returned_lbs:</strong> ${payload_dragon_mass_returned_lbs}</p>
+                    <p><strong>payload_dragon_flight_time_sec:</strong> ${payload_dragon_flight_time_sec}</p>
+                    <p><strong>payload_dragon_manifest:</strong> ${payload_dragon_manifest ? `<a href="${payload_dragon_manifest}" target="_blank">payload_dragon_manifest</a>` : 'N/A'}</p>     
+                    <p><strong>payload_dragon_water_landing:</strong> ${payload_dragon_water_landing}</p>
+                    <p><strong>payload_dragon_land_landing:</strong> ${payload_dragon_land_landing}</p>
+                    <p><strong>payload_type:</strong> ${payload_type}</p>
+                    <p><strong>payload_reused:</strong> ${payload_reused}</p>
+                    <p><strong>payload_launch:</strong> ${payload_launch}</p>
+                    <p><strong>payload_customers:</strong> ${payload_customers}</p>
+                    <p><strong>payload_norad_ids:</strong> ${payload_norad_ids}</p>
+                    <p><strong>payload_nationalities:</strong> ${payload_nationalities}</p>
+                    <p><strong>payload_manufacturers:</strong> ${payload_manufacturers}</p>
+                    <p><strong>payload_mass_kg:</strong> ${payload_mass_kg}</p>
+                    <p><strong>payload_mass_lbs:</strong> ${payload_mass_lbs}</p>
+                    </section>
+                    <section class='middle'>
+                        <img src='../storage/img/payloadsIcon.svg'>
+                    </section>
+                    <section class='right'>
+                    <p><strong>payload_orbit:</strong> ${payload_orbit}</p>
+                    <p><strong>payload_reference_system:</strong> ${payload_reference_system}</p>
+                    <p><strong>payload_regime:</strong> ${payload_regime}</p>
+                    <p><strong>payload_longitude:</strong> ${payload_longitude}</p>
+                    <p><strong>payload_semi_major_axis_km:</strong> ${payload_semi_major_axis_km}</p>
+                    <p><strong>payload_eccentricity:</strong> ${payload_eccentricity}</p>
+                    <p><strong>payload_periapsis_km:</strong> ${payload_periapsis_km}</p>
+                    <p><strong>payload_apoapsis_km:</strong> ${payload_apoapsis_km}</p>
+                    <p><strong>payload_inclination_deg:</strong> ${payload_inclination_deg}</p>
+                    <p><strong>payload_period_min:</strong> ${payload_period_min}</p>
+                    <p><strong>payload_lifespan_years:</strong> ${payload_lifespan_years}</p>
+                    <p><strong>payload_epoch:</strong> ${payload_epoch}</p>
+                    <p><strong>payload_mean_motion:</strong> ${payload_mean_motion}</p>
+                    <p><strong>payload_raan:</strong> ${payload_raan}</p>
+                    <p><strong>payload_arg_of_pericenter:</strong> ${payload_arg_of_pericenter}</p>
+                    <p><strong>payload_mean_anomaly:</strong> ${payload_mean_anomaly}</p>
+                    <p><strong>payload_id:</strong> ${payload_id}</p>                
                 </section>
-
-                <p><strong>payload_dragon_capsule:</strong> ${payload_dragon_capsule}</p>
-                <p><strong>payload_dragon_mass_returned_kg:</strong> ${payload_dragon_mass_returned_kg}</p>
-                <p><strong>payload_dragon_mass_returned_lbs:</strong> ${payload_dragon_mass_returned_lbs}</p>
-                <p><strong>payload_dragon_flight_time_sec:</strong> ${payload_dragon_flight_time_sec}</p>
-                <p><strong>payload_dragon_manifest:</strong> ${payload_dragon_manifest}</p>
-                <p><strong>payload_dragon_water_landing:</strong> ${payload_dragon_water_landing}</p>
-                <p><strong>payload_dragon_land_landing:</strong> ${payload_dragon_land_landing}</p>
-                <p><strong>payload_type:</strong> ${payload_type}</p>
-                <p><strong>payload_reused:</strong> ${payload_reused}</p>
-                <p><strong>payload_launch:</strong> ${payload_launch}</p>
-                <p><strong>payload_customers:</strong> ${payload_customers}</p>
-                <p><strong>payload_norad_ids:</strong> ${payload_norad_ids}</p>
-                <p><strong>payload_nationalities:</strong> ${payload_nationalities}</p>
-                <p><strong>payload_manufacturers:</strong> ${payload_manufacturers}</p>
-                <p><strong>payload_mass_kg:</strong> ${payload_mass_kg}</p>
-                <p><strong>payload_mass_lbs:</strong> ${payload_mass_lbs}</p>
-                <p><strong>payload_orbit:</strong> ${payload_orbit}</p>
-                <p><strong>payload_reference_system:</strong> ${payload_reference_system}</p>
-                <p><strong>payload_regime:</strong> ${payload_regime}</p>
-                <p><strong>payload_longitude:</strong> ${payload_longitude}</p>
-                <p><strong>payload_semi_major_axis_km:</strong> ${payload_semi_major_axis_km}</p>
-                <p><strong>payload_eccentricity:</strong> ${payload_eccentricity}</p>
-                <p><strong>payload_periapsis_km:</strong> ${payload_periapsis_km}</p>
-                <p><strong>payload_apoapsis_km:</strong> ${payload_apoapsis_km}</p>
-                <p><strong>payload_inclination_deg:</strong> ${payload_inclination_deg}</p>
-                <p><strong>payload_period_min:</strong> ${payload_period_min}</p>
-                <p><strong>payload_lifespan_years:</strong> ${payload_lifespan_years}</p>
-                <p><strong>payload_epoch:</strong> ${payload_epoch}</p>
-                <p><strong>payload_mean_motion:</strong> ${payload_mean_motion}</p>
-                <p><strong>payload_raan:</strong> ${payload_raan}</p>
-                <p><strong>payload_arg_of_pericenter:</strong> ${payload_arg_of_pericenter}</p>
-                <p><strong>payload_mean_anomaly:</strong> ${payload_mean_anomaly}</p>
-                <p><strong>payload_id:</strong> ${payload_id}</p>                
-            `;
+                </section>
+                `;
             } else {
                 console.error('Elemento con ID "payload-details" no encontrado.');// Si la cabaña no se encuentra, el mago muestra un error en la consola mágica
             }

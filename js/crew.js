@@ -76,17 +76,18 @@ const getAllDetailDatacrews = async (crewId) => {
             if (crewDetails) {
                 crewDetails.innerHTML =   // El mago conjura el hechizo "innerHTML" para imprimir dinámicamente en el pergamino
                 /*html*/`
-                <section class='up'>
+                <div id='down'>
+                <img src="${crew_image}" alt="${crew_name}" referrerpolicy="no-referrer">
+                <div id='down_detail'>
                 <h2>${crew_name}</h2>
-                </section>
-
                 <p><strong>crew_id:</strong> ${crew_id}</p>
                 <p><strong>crew_launches:</strong> ${crew_launches}</p>
-                <img src="${crew_image}" alt="${crew_name}" referrerpolicy="no-referrer">
                 <p><strong>crew_agency:</strong> ${crew_agency}</p>
                 <p><strong>crew_status:</strong> ${crew_status}</p>
                 <p><strong>crew_wikipedia:</strong> ${crew_wikipedia}</p>
-            `;
+                </div>
+                </div>
+                `;
             } else {
                 console.error('Elemento con ID "crew-details" no encontrado.');// Si la cabaña no se encuentra, el mago muestra un error en la consola mágica
             }

@@ -86,34 +86,44 @@ const getAllDetailDatalaunches = async (launchesId) => {
                     // disponible antes de escribirla en el pergamino. Es como verificar si un hechizo está disponible antes de lanzarlo.
                     /*html*/
                     `
-                    <section class='up'>
+                    <section class='main'>
+
+                    <section class='main_left'>
+
                         <h2>${name}</h2>
+                        <p><strong>Launch ID:</strong> ${id}</p>
+                        <p><strong>Fairings Reused:</strong> ${fairings ? fairings.reused : 'N/A'}</p>
+                        <p><strong>Recovery Attempt:</strong> ${fairings ? fairings.recovery_attempt : 'N/A'}</p>
+                        <p><strong>Recovered:</strong> ${fairings ? fairings.recovered : 'N/A'}</p>
+                        <p><strong>Reddit Campaign:</strong> ${reddit && reddit.campaign ? `<a href="${reddit.campaign}" target="_blank">${reddit.campaign}</a>` : 'N/A'}</p>
+                        <p><strong>Reddit Launch:</strong> ${reddit && reddit.launch ? `<a href="${reddit.launch}" target="_blank">${reddit.launch}</a>` : 'N/A'}</p>
+                        <p><strong>Reddit Media:</strong> ${reddit && reddit.media ? `<a href="${reddit.media}" target="_blank">${reddit.media}</a>` : 'N/A'}</p>
+                        <p><strong>Reddit Recovery:</strong> ${reddit && reddit.recovery ? `<a href="${reddit.recovery}" target="_blank">${reddit.recovery}</a>` : 'N/A'}</p>
+                        <p><strong>Presskit:</strong> ${presskit ? `<a href="${presskit}" target="_blank">Presskit</a>` : 'N/A'}</p>
+                        <p><strong>Webcast:</strong> ${webcast ? `<a href="${webcast}" target="_blank">Webcast</a>` : 'N/A'}</p>
+                        <p><strong>YouTube ID:</strong> ${youtube_id ? `<a href="https://www.youtube.com/watch?v=${youtube_id}" target="_blank">YouTube Video</a>` : 'N/A'}</p>
+                        <p><strong>Article:</strong> ${article ? `<a href="${article}" target="_blank">Article</a>` : 'N/A'}</p>
+                        <p><strong>Wikipedia:</strong> ${wikipedia ? `<a href="${wikipedia}" target="_blank">Wikipedia</a>` : 'N/A'}</p>                        <p><strong>Static Fire Date (UTC):</strong> ${static_fire_date_utc ? static_fire_date_utc : 'N/A'}</p>
+                        <p><strong>Static Fire Date (Unix):</strong> ${static_fire_date_unix ? static_fire_date_unix : 'N/A'}</p>
+                        <p><strong>Net:</strong> ${net ? net : 'N/A'}</p>
+                        <p><strong>Window:</strong> ${window ? window : 'N/A'}</p>
+                        <p><strong>Rocket:</strong> ${rocket ? rocket : 'N/A'}</p>
+                        <p><strong>Success:</strong> ${success ? success : 'N/A'}</p>
+                        ${failures && failures.length > 0 ? `
+                            <p><strong>Failure Time:</strong> ${failures[0].time}</p>
+                            <p><strong>Altitude:</strong> ${failures[0].altitude}</p>
+                            <p><strong>Failure Reason:</strong> ${failures[0].reason}</p>
+                        ` : ''}
                     </section>
-                    <p><strong>Launch ID:</strong> ${id}</p>
-                    <p><strong>Fairings Reused:</strong> ${fairings ? fairings.reused : 'N/A'}</p>
-                    <p><strong>Recovery Attempt:</strong> ${fairings ? fairings.recovery_attempt : 'N/A'}</p>
-                    <p><strong>Recovered:</strong> ${fairings ? fairings.recovered : 'N/A'}</p>
-                    <img src="${patch ? patch.small : 'N/A'}" alt="Patch Small" referrerpolicy="no-referrer">
-                    <p><strong>Reddit Campaign:</strong> ${reddit ? reddit.campaign : 'N/A'}</p>
-                    <p><strong>Reddit Launch:</strong> ${reddit ? reddit.launch : 'N/A'}</p>
-                    <p><strong>Reddit Media:</strong> ${reddit ? reddit.media : 'N/A'}</p>
-                    <p><strong>Reddit Recovery:</strong> ${reddit ? reddit.recovery : 'N/A'}</p>
-                    <p><strong>Presskit:</strong> ${presskit ? presskit : 'N/A'}</p>
-                    <p><strong>Webcast:</strong> ${webcast ? webcast : 'N/A'}</p>
-                    <p><strong>YouTube ID:</strong> ${youtube_id ? youtube_id : 'N/A'}</p>
-                    <p><strong>Article:</strong> ${article ? article : 'N/A'}</p>
-                    <p><strong>Wikipedia:</strong> ${wikipedia ? wikipedia : 'N/A'}</p>
-                    <p><strong>Static Fire Date (UTC):</strong> ${static_fire_date_utc ? static_fire_date_utc : 'N/A'}</p>
-                    <p><strong>Static Fire Date (Unix):</strong> ${static_fire_date_unix ? static_fire_date_unix : 'N/A'}</p>
-                    <p><strong>Net:</strong> ${net ? net : 'N/A'}</p>
-                    <p><strong>Window:</strong> ${window ? window : 'N/A'}</p>
-                    <p><strong>Rocket:</strong> ${rocket ? rocket : 'N/A'}</p>
-                    <p><strong>Success:</strong> ${success ? success : 'N/A'}</p>
-                    ${failures && failures.length > 0 ? `
-                        <p><strong>Failure Time:</strong> ${failures[0].time}</p>
-                        <p><strong>Altitude:</strong> ${failures[0].altitude}</p>
-                        <p><strong>Failure Reason:</strong> ${failures[0].reason}</p>
-                    ` : ''}
+
+
+
+                    <section class='main_middle'>
+                        <img src="${patch ? patch.large : 'N/A'}" alt="Patch large" referrerpolicy="no-referrer">
+                    </section>
+
+
+                    <section class='main_right'>
                     <p><strong>Details:</strong> ${details ? details : 'N/A'}</p>
                     <p><strong>Payloads:</strong> ${payloads ? payloads : 'N/A'}</p>
                     <p><strong>Launchpad:</strong> ${launchpad ? launchpad : 'N/A'}</p>
@@ -135,7 +145,11 @@ const getAllDetailDatalaunches = async (launchesId) => {
                     <p><strong>Auto Update:</strong> ${auto_update ? auto_update : 'N/A'}</p>
                     <p><strong>TBD:</strong> ${tbd ? tbd : 'N/A'}</p>
                     <p><strong>Launch Library ID:</strong> ${launch_library_id ? launch_library_id : 'N/A'}</p>
-                `;
+                    </section>
+
+
+                    </section>
+                    `;
             }
         } else {
             console.error(`Launch con ID ${launchesId} no encontrado.`);

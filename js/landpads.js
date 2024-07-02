@@ -83,25 +83,28 @@ const getAllDetailDatalandpads = async (landpadId) => {
                     // disponible antes de escribirla en el pergamino. Es como verificar si un hechizo está disponible antes de lanzarlo.
                     /*html*/
                     `
-                    <section class='up'>
-                        <h2>${landpads_name}</h2>
-                    </section>
-
+                    <section class='main'>
+                    <section class='left'>
                     <img src="${landpads_large}" alt="${landpads_name}" referrerpolicy="no-referrer">
-                    <p><strong>landpads_full_name:</strong> ${landpads_full_name}</p>
-                    <p><strong>landpads_status:</strong> ${landpads_status}</p>
-                    <p><strong>landpads_type:</strong> ${landpads_type}</p>
-                    <p><strong>landpads_locality:</strong> ${landpads_locality}</p>
-                    <p><strong>landpads_region:</strong> ${landpads_region}</p>
-                    <p><strong>landpads_latitude:</strong> ${landpads_latitude}</p>
-                    <p><strong>landpads_longitude:</strong> ${landpads_longitude}</p>
-                    <p><strong>landpads_landing_attempts:</strong> ${landpads_landing_attempts}</p>
-                    <p><strong>landpads_landing_successes:</strong> ${landpads_landing_successes}</p>
-                    <p><strong>landpads_wikipedia:</strong> ${landpads_wikipedia}</p>
-                    <p><strong>landpads_details:</strong> ${landpads_details}</p>
-                    <p><strong>landpads_launches:</strong> ${landpads_launches}</p>
-                    <p><strong>landpads_id:</strong> ${landpads_id}</p>
-
+                    </section>
+                    <section class='right'>
+                    <h2>${landpads_name}</h2>
+                    <p><strong>landpad_full_name:</strong> ${landpads_full_name}</p>
+                    <p><strong>landpad_status:</strong> ${landpads_status}</p>
+                    <p><strong>landpad_type:</strong> ${landpads_type}</p>
+                    <p><strong>landpad_locality:</strong> ${landpads_locality}</p>
+                    <p><strong>landpad_region:</strong> ${landpads_region}</p>
+                    <p><strong>landpad_latitude:</strong> ${landpads_latitude}</p>
+                    <p><strong>landpad_longitude:</strong> ${landpads_longitude}</p>
+                    <p><strong>landpad_landing_attempts:</strong> ${landpads_landing_attempts}</p>
+                    <p><strong>landpad_landing_successes:</strong> ${landpads_landing_successes}</p>
+                    <p><strong>landpad_wikipedia:</strong><a href="${landpads_wikipedia}">Wikipedia</a></p>                       
+                    <p><strong>landpad_details:</strong> ${landpads_details}</p>
+                    <p><strong>landpad_launches:</strong> ${landpads_launches}</p>
+                    <p><strong>landpad_id:</strong> ${landpads_id}</p>
+                    </section>
+                    
+                    </section>
                 `;
             }
         } else {

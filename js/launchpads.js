@@ -91,24 +91,30 @@ const getAllDetailDatalaunchpads = async (launchpadId) => {
                 launchpadDetails.innerHTML =  // El mago conjura el hechizo "innerHTML" para imprimir dinámicamente en el pergamino
 
                 /*html*/`
-                <section class='up'>
-                <h2>${launchpad_name}</h2>
+                <section class='main'>
+                    <section class='left'>
+                        <h2>${launchpad_name}</h2>
+                        <p><strong>launchpad_full_name:</strong> ${launchpad_full_name}</p>
+                            <p><strong>launchpad_locality:</strong> ${launchpad_locality}</p>
+                            <p><strong>launchpad_region:</strong> ${launchpad_region}</p>
+                            <p><strong>launchpad_latitude:</strong> ${launchpad_latitude}</p>
+                            <p><strong>launchpad_longitude:</strong> ${launchpad_longitude}</p>
+                            <p><strong>launchpad_launch_successes:</strong> ${launchpad_launch_successes}</p>
+                            <p><strong>launchpad_launch_attempts:</strong> ${launchpad_launch_attempts}</p>
+                        </section>
+                        <section class='middle'>
+                            <img src="${launchpad_images_large}" alt="${launchpad_name}" referrerpolicy="no-referrer">
+                        </section>
+                        <section class='right'>
+                            <p><strong>launchpad_rockets:</strong> ${launchpad_rockets}</p>
+                            <p><strong>launchpad_timezone:</strong> ${launchpad_timezone}</p>
+                            <p><strong>timezone_launches_launchpad:</strong> ${timezone_launches_launchpad}</p>
+                            <p><strong>launchpad_status:</strong> ${launchpad_status}</p>
+                            <p><strong>launchpad_details:</strong> ${launchpad_details}</p>
+                            <p><strong>launchpad_id:</strong> ${launchpad_id}</p>
+                        </section>
                 </section>
 
-                <p><strong>launchpad_full_name:</strong> ${launchpad_full_name}</p>
-                <img src="${launchpad_images_large}" alt="${launchpad_name}" referrerpolicy="no-referrer">
-                <p><strong>launchpad_locality:</strong> ${launchpad_locality}</p>
-                <p><strong>launchpad_region:</strong> ${launchpad_region}</p>
-                <p><strong>launchpad_latitude:</strong> ${launchpad_latitude}</p>
-                <p><strong>launchpad_longitude:</strong> ${launchpad_longitude}</p>
-                <p><strong>launchpad_launch_attempts:</strong> ${launchpad_launch_attempts}</p>
-                <p><strong>launchpad_launch_successes:</strong> ${launchpad_launch_successes}</p>
-                <p><strong>launchpad_rockets:</strong> ${launchpad_rockets}</p>
-                <p><strong>launchpad_timezone:</strong> ${launchpad_timezone}</p>
-                <p><strong>timezone_launches_launchpad:</strong> ${timezone_launches_launchpad}</p>
-                <p><strong>launchpad_status:</strong> ${launchpad_status}</p>
-                <p><strong>launchpad_details:</strong> ${launchpad_details}</p>
-                <p><strong>launchpad_id:</strong> ${launchpad_id}</p>
             `;
             } else {
                 console.error('Elemento con ID "launchpads-details" no encontrado.');// Si la cabaña no se encuentra, el mago muestra un error en la consola mágica

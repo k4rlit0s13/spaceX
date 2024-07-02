@@ -75,39 +75,41 @@ const getAllDetailDataroadsters = async (roadsterId) => {
                 roadsterDetails.innerHTML = 
                 /*html*/
                 `
-                <section class='up'>
+                <section class='main'>
+                <section class='left'>
                     <h2>${name}</h2>
+                    <p><strong>launch_date_utc:</strong> ${launch_date_utc}</p>
+                    <p><strong>launch_date_unix:</strong> ${launch_date_unix}</p>
+                    <p><strong>launch_mass_kg:</strong> ${launch_mass_kg}</p>
+                    <p><strong>launch_mass_lbs:</strong> ${launch_mass_lbs}</p>
+                    <p><strong>norad_id:</strong> ${norad_id}</p>
+                    <p><strong>epoch_jd:</strong> ${epoch_jd}</p>
+                    <p><strong>orbit_type:</strong> ${orbit_type}</p>
+                    <p><strong>apoapsis_au:</strong> ${apoapsis_au}</p>
+                    <p><strong>periapsis_au:</strong> ${periapsis_au}</p>
+                    <p><strong>semi_major_axis_au:</strong> ${semi_major_axis_au}</p>
+                    <p><strong>eccentricity:</strong> ${eccentricity}</p>
+                    <p><strong>inclination:</strong> ${inclination}</p>
+                    <p><strong>longitude:</strong> ${longitude}</p>
                 </section>
-                
-                <p><strong>launch_date_utc:</strong> ${launch_date_utc}</p>
-                <p><strong>launch_date_unix:</strong> ${launch_date_unix}</p>
-                <p><strong>launch_mass_kg:</strong> ${launch_mass_kg}</p>
-                <p><strong>launch_mass_lbs:</strong> ${launch_mass_lbs}</p>
-                <p><strong>norad_id:</strong> ${norad_id}</p>
-                <p><strong>epoch_jd:</strong> ${epoch_jd}</p>
-                <p><strong>orbit_type:</strong> ${orbit_type}</p>
-                <p><strong>apoapsis_au:</strong> ${apoapsis_au}</p>
-                <p><strong>periapsis_au:</strong> ${periapsis_au}</p>
-                <p><strong>semi_major_axis_au:</strong> ${semi_major_axis_au}</p>
-                <p><strong>eccentricity:</strong> ${eccentricity}</p>
-                <p><strong>inclination:</strong> ${inclination}</p>
-                <p><strong>longitude:</strong> ${longitude}</p>
-                <p><strong>periapsis_arg:</strong> ${periapsis_arg}</p>
-                <p><strong>period_days:</strong> ${period_days}</p>
-                <p><strong>speed_kph:</strong> ${speed_kph}</p>
-                <p><strong>speed_mph:</strong> ${speed_mph}</p>
-                <p><strong>earth_distance_km:</strong> ${earth_distance_km}</p>
-                <p><strong>earth_distance_mi:</strong> ${earth_distance_mi}</p>
-                <p><strong>mars_distance_km:</strong> ${mars_distance_km}</p>
-                <p><strong>mars_distance_mi:</strong> ${mars_distance_mi}</p>
-                <div class="images">
-                    ${flickr_images.map(img => `<img src="${img}" alt="Imagen del roadster">`).join('')}
-                </div>
-                <p><strong>wikipedia:</strong> ${wikipedia}</p>
-                <p><strong>video:</strong> ${video}</p>
-                <p><strong>details:</strong> ${details}</p>
-                <p><strong>id:</strong> ${id}</p>
-
+                    <div class="middle">
+                        ${flickr_images.map(img => `<img src="${img}" alt="Imagen del roadster">`).join('')}
+                    </div>
+                    <div class="right">
+                        <p><strong>periapsis_arg:</strong> ${periapsis_arg}</p>
+                        <p><strong>period_days:</strong> ${period_days}</p>
+                        <p><strong>speed_kph:</strong> ${speed_kph}</p>
+                        <p><strong>speed_mph:</strong> ${speed_mph}</p>
+                        <p><strong>earth_distance_km:</strong> ${earth_distance_km}</p>
+                        <p><strong>earth_distance_mi:</strong> ${earth_distance_mi}</p>
+                        <p><strong>mars_distance_km:</strong> ${mars_distance_km}</p>
+                        <p><strong>mars_distance_mi:</strong> ${mars_distance_mi}</p>
+                        <p><strong>wikipedia:</strong><a href="${wikipedia}">wikipedia</a></p>                       
+                        <p><strong>video:</strong> ${video}</p>
+                        <p><strong>details:</strong> ${details}</p>
+                        <p><strong>id:</strong> ${id}</p>
+                    </section>
+                </section>
                 `;
             } else {
                 console.error('Elemento con ID "roadster-details" no encontrado.');

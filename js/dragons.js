@@ -137,60 +137,78 @@ const getAllDetailDatadragons = async (landpadId) => {
                     // disponible antes de escribirla en el pergamino. Es como verificar si un hechizo está disponible antes de lanzarlo.
                     /*html*/
                     `
-                    <section class='up'>
-                        <h2>${dragons_name}</h2>
-                    </section>
-
-                    <p><strong>dragons_material:</strong> ${dragons_material}</p>
-                    <p><strong>dragons_size_meters:</strong> ${dragons_size_meters}</p>
-                    <p><strong>dragons_temp_degrees:</strong> ${dragons_temp_degrees}</p>
-                    <p><strong>dragons_dev_partner:</strong> ${dragons_dev_partner}</p>
-                    <p><strong>dragons_kg:</strong> ${dragons_kg}</p>
-                    <p><strong>dragons_lb:</strong> ${dragons_lb}</p>
-                    <p><strong>dragons_cubic_meters:</strong> ${dragons_cubic_meters}</p>
-                    <p><strong>dragons_cubic_feet:</strong> ${dragons_cubic_feet}</p>
+                    <section class='main'>
+                    <section class='left'>
+                    <h2>${dragons_name}</h2>
+                    <p><strong>dragon_material:</strong> ${dragons_material}</p>
+                    <p><strong>dragon_size_meters:</strong> ${dragons_size_meters}</p>
+                    <p><strong>dragon_temp_degrees:</strong> ${dragons_temp_degrees}</p>
+                    <p><strong>dragon_dev_partner:</strong> ${dragons_dev_partner}</p>
+                    <p><strong>dragon_kg:</strong> ${dragons_kg}</p>
+                    <p><strong>dragon_lb:</strong> ${dragons_lb}</p>
+                    <p><strong>dragon_cubic_meters:</strong> ${dragons_cubic_meters}</p>
+                    <p><strong>dragon_cubic_feet:</strong> ${dragons_cubic_feet}</p>
                     <p><strong>return_payload_mass_dragons_kg:</strong> ${return_payload_mass_dragons_kg}</p>
                     <p><strong>return_payload_mass_dragons_lb:</strong> ${return_payload_mass_dragons_lb}</p>
                     <p><strong>return_payload_vol_dragons_cubic_meters:</strong> ${return_payload_vol_dragons_cubic_meters}</p>
                     <p><strong>return_payload_vol_dragons_cubic_feet:</strong> ${return_payload_vol_dragons_cubic_feet}</p>
                     <p><strong>payload_volume_dragons_cubic_meters:</strong> ${payload_volume_dragons_cubic_meters}</p>
                     <p><strong>payload_volume_dragons_cubic_feet:</strong> ${payload_volume_dragons_cubic_feet}</p>
+                    <p><strong>height_w_trunk_dragons_feet:</strong> ${height_w_trunk_dragons_feet}</p>
+                    <p><strong>dragon_unpressurized_cargo:</strong> ${dragons_unpressurized_cargo}</p>
+                    <p><strong>height_w_trunk_dragons_meters:</strong> ${height_w_trunk_dragons_meters}</p>
+                    </section>
+                    
+                    
+                    <section class='middle'>
+                    <section class='middle_up'>
+                    <img src="${dragons_flickr_images}" alt="${dragons_name}" referrerpolicy="no-referrer">
+                    </section>
+                    <section class='middle_down'>
+                    
+                    <section class='middle_down_left'>
+                    <p><strong>dragon_meters:</strong> ${dragons_meters}</p>
+                    <p><strong>dragon_feet:</strong> ${dragons_feet}</p>
+                    <p><strong>dragon_first_flight:</strong> ${dragons_first_flight}</p>
+                    <p><strong>dragon_type:</strong> ${dragons_type}</p>
+                    <p><strong>dragon_active:</strong> ${dragons_active}</p>
+                    <p><strong>dragon_crew_capacity:</strong> ${dragons_crew_capacity}</p>
+                    <p><strong>dragon_sidewall_angle_deg:</strong> ${dragons_sidewall_angle_deg}</p>
+                    <p><strong>dragon_orbit_duration_yr:</strong> ${dragons_orbit_duration_yr}</p>
+                    </section>
+
+                    <section class='middle_down_right'>
+                    <p><strong>dragon_dry_mass_kg:</strong> ${dragons_dry_mass_kg}</p>
+                    <p><strong>dragon_dry_mass_lb:</strong> ${dragons_dry_mass_lb}</p>
+                    <p><strong>thrusters_dragon_type:</strong> ${thrusters_dragons_type}</p>
+                    <p><strong>dragon_amount:</strong> ${dragons_amount}</p>
+                    <p><strong>dragon_pods:</strong> ${dragons_pods}</p>
+                    </section>
+                    
+                    </section>
+                    </section>
+                    
+                    <section class='right'>
+                    <p><strong>dragon_fuel_1:</strong> ${dragons_fuel_1}</p>
+                    <p><strong>dragon_fuel_2:</strong> ${dragons_fuel_2}</p>
+                    <p><strong>dragon_isp:</strong> ${dragons_isp}</p>
+                    <p><strong>dragon_kN:</strong> ${dragons_kN}</p>
+                    <p><strong>dragon_lbf:</strong> ${dragons_lbf}</p>
+                    <p><strong>dragon_wikipedia:</strong> ${dragons_wikipedia}</p>
+                    <p><strong>dragon_description:</strong> ${dragons_description}</p>
+                    <p><strong>dragon_id:</strong> ${dragons_id}</p>
                     <p><strong>trunk_volume_dragons_cubic_meters:</strong> ${trunk_volume_dragons_cubic_meters}</p>
                     <p><strong>cubic_feet_dragons_cubic_feet:</strong> ${cubic_feet_dragons_cubic_feet}</p>
-                    <p><strong>dragons_solar_array:</strong> ${dragons_solar_array}</p>
-                    <p><strong>dragons_unpressurized_cargo:</strong> ${dragons_unpressurized_cargo}</p>
-                    <p><strong>height_w_trunk_dragons_meters:</strong> ${height_w_trunk_dragons_meters}</p>
-                    <p><strong>height_w_trunk_dragons_feet:</strong> ${height_w_trunk_dragons_feet}</p>
-                    <p><strong>dragons_meters:</strong> ${dragons_meters}</p>
-                    <p><strong>dragons_feet:</strong> ${dragons_feet}</p>
-                    <p><strong>dragons_first_flight:</strong> ${dragons_first_flight}</p>
-                    <img src="${dragons_flickr_images}" alt="${dragons_name}" referrerpolicy="no-referrer">
-                    <p><strong>dragons_type:</strong> ${dragons_type}</p>
-                    <p><strong>dragons_active:</strong> ${dragons_active}</p>
-                    <p><strong>dragons_crew_capacity:</strong> ${dragons_crew_capacity}</p>
-                    <p><strong>dragons_sidewall_angle_deg:</strong> ${dragons_sidewall_angle_deg}</p>
-                    <p><strong>dragons_orbit_duration_yr:</strong> ${dragons_orbit_duration_yr}</p>
-                    <p><strong>dragons_dry_mass_kg:</strong> ${dragons_dry_mass_kg}</p>
-                    <p><strong>dragons_dry_mass_lb:</strong> ${dragons_dry_mass_lb}</p>
-                    <p><strong>thrusters_dragons_type:</strong> ${thrusters_dragons_type}</p>
-                    <p><strong>dragons_amount:</strong> ${dragons_amount}</p>
-                    <p><strong>dragons_pods:</strong> ${dragons_pods}</p>
-                    <p><strong>dragons_fuel_1:</strong> ${dragons_fuel_1}</p>
-                    <p><strong>dragons_fuel_2:</strong> ${dragons_fuel_2}</p>
-                    <p><strong>dragons_isp:</strong> ${dragons_isp}</p>
-                    <p><strong>dragons_kN:</strong> ${dragons_kN}</p>
-                    <p><strong>dragons_lbf:</strong> ${dragons_lbf}</p>
-                    <p><strong>dragons_wikipedia:</strong> ${dragons_wikipedia}</p>
-                    <p><strong>dragons_description:</strong> ${dragons_description}</p>
-                    <p><strong>dragons_id:</strong> ${dragons_id}</p>
-
-                `;
+                    <p><strong>dragon_solar_array:</strong> ${dragons_solar_array}</p>
+                    </section>
+                    </section>
+                    `;
+                }
+            } else {
+                console.error(`landpad con ID ${landpadId} no encontrado.`);
             }
-        } else {
-            console.error(`landpad con ID ${landpadId} no encontrado.`);
-        }
-    } catch (error) {
-        console.error(`Error al obtener detalles del landpad con ID ${landpadId}: ${error.message}`);
+        } catch (error) {
+            console.error(`Error al obtener detalles del landpad con ID ${landpadId}: ${error.message}`);
     }
 };
 

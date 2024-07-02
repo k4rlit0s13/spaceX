@@ -78,13 +78,15 @@ const getAllDetailDataCapsules = async (capsuleId) => {
 // El mago invoca al DOM para encontrar la cabaña específica donde se mostrarán los detalles del capsule
             const capsuleDetails = document.getElementById('capsule-details');
             if (capsuleDetails) {
-                capsuleDetails.innerHTML = /*html*/  // El mago conjura el hechizo "innerHTML" para imprimir dinámicamente en el pergamino
+                capsuleDetails.innerHTML = // El mago conjura el hechizo "innerHTML" para imprimir dinámicamente en el pergamino
 
-                `
-                <section class='up'>
+                /*html*/`
+                <section class='down'>
+                <div id='imgCapsule'>
+                    <img src="../storage/img/spaceCapsule.svg">
+                </div>
+                <div id='down_info_box'>
                 <h2>${capsule_serial}</h2>
-                </section>
-
                 <p><strong>capsule_reuse_count:</strong> ${capsule_reuse_count}</p>
                 <p><strong>capsule_water_landings:</strong> ${capsule_water_landings}</p>
                 <p><strong>capsule_land_landings:</strong> ${capsule_land_landings}</p>
@@ -93,6 +95,8 @@ const getAllDetailDataCapsules = async (capsuleId) => {
                 <p><strong>capsule_status:</strong> ${capsule_status}</p>
                 <p><strong>capsule_type:</strong> ${capsule_type}</p>
                 <p><strong>capsule_id:</strong> ${capsule_id}</p>
+                </div>
+                </section>
                 
             `;
             } else {
@@ -128,7 +132,7 @@ const crearGaleriaBotones = async () => {
 
         const buttonCountContainer = document.querySelector('#button_container_counts_ID');// Localiza el contenedor de conteo de botones en el DOM con otro hechizo de localización
         if (buttonCountContainer) {// Si encuentra el contenedor de conteo de botones...
-            buttonCountContainer.innerHTML = `buttons count: ${data.length}`;// Escribe en el pergamino el número total de botones creados
+            buttonCountContainer.innerHTML = `<p><strong>buttons count: </strong>${data.length}</p>`;// Escribe en el pergamino el número total de botones creados
         } else {// Si no encuentra el contenedor de conteo de botones...
             console.error('Elemento con ID "button_container_counts_ID" no encontrado.');// Lanza un conjuro de error en la consola
         }

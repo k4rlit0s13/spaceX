@@ -80,21 +80,24 @@ const getAllDetailDatacores = async (coreId) => {
                 coreDetails.innerHTML =  // El mago conjura el hechizo "innerHTML" para imprimir dinámicamente en el pergamino
 
                 /*html*/`
-                <section class='up'>
-                <h2>${core_serial}</h2>
+                <section id='main'>
+                <div id='left'>
+                <img src="../storage/img/coreImg.svg">
+                </div>
+                <div id='right'>
+                <h2>${core_serial}</h2> 
+                    <p><strong>core_id:</strong> ${core_id}</p>
+                    <p><strong>core_block:</strong> ${core_block}</p>
+                    <p><strong>core_reuse_count:</strong> ${core_reuse_count}</p>
+                    <p><strong>core_rtls_attempts:</strong> ${core_rtls_attempts}</p>
+                    <p><strong>core_rtls_landings:</strong> ${core_rtls_landings}</p>
+                    <p><strong>core_asds_attempts:</strong> ${core_asds_attempts}</p>
+                    <p><strong>core_asds_landings:</strong> ${core_asds_landings}</p>
+                    <p><strong>core_last_update:</strong> ${core_last_update}</p>   
+                    <p><strong>core_launches:</strong> ${core_launches}</p>
+                    <p><strong>core_status:</strong> ${core_status}</p>
+                </div>
                 </section>
-
-
-                <p><strong>core_id:</strong> ${core_id}</p>
-                <p><strong>core_block:</strong> ${core_block}</p>
-                <p><strong>core_reuse_count:</strong> ${core_reuse_count}</p>
-                <p><strong>core_rtls_attempts:</strong> ${core_rtls_attempts}</p>
-                <p><strong>core_rtls_landings:</strong> ${core_rtls_landings}</p>
-                <p><strong>core_asds_attempts:</strong> ${core_asds_attempts}</p>
-                <p><strong>core_asds_landings:</strong> ${core_asds_landings}</p>
-                <p><strong>core_last_update:</strong> ${core_last_update}</p>   
-                <p><strong>core_launches:</strong> ${core_launches}</p>
-                <p><strong>core_status:</strong> ${core_status}</p>
 
             `;
             } else {

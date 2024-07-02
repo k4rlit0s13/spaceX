@@ -96,10 +96,13 @@ const getAllDetailDataships = async (shipId) => {
                 shipDetails.innerHTML =  // El mago conjura el hechizo "innerHTML" para imprimir dinámicamente en el pergamino
 
                 /*html*/`
-                <section class='up'>
-                <h2>${ship_name}</h2>
+                <section class='main'>
+                <h2 ID='noImage'>NO IMAGE</h2>
+                <section class='left'>
+                    ${ship_image ? `<img src="${ship_image}" alt="${ship_name}" referrerpolicy="no-referrer">` : ''}
                 </section>
-
+                <section class='right'>
+                <h2>${ship_name}</h2>
                 <p><strong>ship_last_ais_update:</strong> ${ship_last_ais_update}</p>
                 <p><strong>ship_legacy_id:</strong> ${ship_legacy_id}</p>
                 <p><strong>ship_model:</strong> ${ship_model}</p>
@@ -118,13 +121,13 @@ const getAllDetailDataships = async (shipId) => {
                 <p><strong>ship_course_deg:</strong> ${ship_course_deg}</p>
                 <p><strong>ship_latitude:</strong> ${ship_latitude}</p>
                 <p><strong>ship_longitude:</strong> ${ship_longitude}</p>
-                <p><strong>ship_link:</strong> ${ship_link}</p>
-                <img src="${ship_image}" alt="${ship_name}" referrerpolicy="no-referrer">
+                <p><strong>ship_link: </strong><a href="${ship_link}">ship_link</a></p>                       
                 <p><strong>ship_active:</strong> ${ship_active}</p>
                 <p><strong>ship_launches:</strong> ${ship_launches}</p>
                 <p><strong>ship_id:</strong> ${ship_id}</p>
-
-            `;
+                </section>
+                </section>
+                `;
             } else {
                 console.error('Elemento con ID "ships-details" no encontrado.');// Si la cabaña no se encuentra, el mago muestra un error en la consola mágica
             }

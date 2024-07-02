@@ -75,17 +75,19 @@ const getAllDetailDatahistory = async (historyId) => {
                 historyDetails.innerHTML =  // El mago conjura el hechizo "innerHTML" para imprimir dinámicamente en el pergamino
 
                 /*html*/`
-                <section class='up'>
-                <h2>${history_title}</h2>
+                <section class='main'>
+                    <section class='left'>
+                        <img src="../storage/img/historyIcon.svg">
+                    </section>
+                        <section class='right'>                
+                            <h2>${history_title}</h2>
+                            <p><strong>history_id:</strong> ${history_id}</p>
+                            <p><strong>links_article_history:</strong> ${links_article_history}</p>
+                            <p><strong>history_event_date_utc:</strong> ${history_event_date_utc}</p>
+                            <p><strong>history_event_date_unix:</strong> ${history_event_date_unix}</p>
+                            <p><strong>history_details:</strong> ${history_details}</p>
+                        </section>
                 </section>
-
-
-                <p><strong>history_id:</strong> ${history_id}</p>
-                <p><strong>links_article_history:</strong> ${links_article_history}</p>
-                <p><strong>history_event_date_utc:</strong> ${history_event_date_utc}</p>
-                <p><strong>history_event_date_unix:</strong> ${history_event_date_unix}</p>
-                <p><strong>history_details:</strong> ${history_details}</p>
-
 
             `;
             } else {

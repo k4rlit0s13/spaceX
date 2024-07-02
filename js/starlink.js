@@ -101,9 +101,9 @@ const getAllDetailDataStarlinks = async (starlinkId) => { // Corregido el nombre
             if (starlinkDetails) {
                 starlinkDetails.innerHTML = // El mago conjura el hechizo "innerHTML" para imprimir dinámicamente en el pergamino
                     /*html*/ `
-                    <section class='up'>
+                    <section class='main'>
+                    <section class='left'>
                     <h2>${OBJECT_NAME}</h2>
-                    </section>
                     <p><strong>OBJECT_ID:</strong> ${OBJECT_ID}</p>
                     <p><strong>CCSDS_OMM_VERS:</strong> ${CCSDS_OMM_VERS}</p>
                     <p><strong>COMMENT:</strong> ${COMMENT}</p>
@@ -128,6 +128,11 @@ const getAllDetailDataStarlinks = async (starlinkId) => { // Corregido el nombre
                     <p><strong>BSTAR:</strong> ${BSTAR}</p>
                     <p><strong>MEAN_MOTION_DOT:</strong> ${MEAN_MOTION_DOT}</p>
                     <p><strong>MEAN_MOTION_DDOT:</strong> ${MEAN_MOTION_DDOT}</p>
+                    </section>
+                    <section class='middle'>
+                    <img src="../storage/img/starlinkIcon.svg">
+                    </section>
+                    <section class='right'>
                     <p><strong>SEMIMAJOR_AXIS:</strong> ${SEMIMAJOR_AXIS}</p>
                     <p><strong>PERIOD:</strong> ${PERIOD}</p>
                     <p><strong>APOAPSIS:</strong> ${APOAPSIS}</p>
@@ -151,6 +156,8 @@ const getAllDetailDataStarlinks = async (starlinkId) => { // Corregido el nombre
                     <p><strong>longitude:</strong> ${longitude}</p>
                     <p><strong>velocity_kms:</strong> ${velocity_kms}</p>
                     <p><strong>id:</strong> ${id}</p>
+                    </section>
+                    </section>
                 `;
             } else {
                 console.error('Elemento con ID "starlink-details" no encontrado.'); // Si la cabaña no se encuentra, el mago muestra un error en la consola mágica
