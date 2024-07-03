@@ -173,11 +173,11 @@ const getAllDetailDatadragons = async (landpadId) => {
                     <p><strong>dragon_type:</strong> ${dragons_type}</p>
                     <p><strong>dragon_active:</strong> ${dragons_active}</p>
                     <p><strong>dragon_crew_capacity:</strong> ${dragons_crew_capacity}</p>
+                    </section>
+                    
+                    <section class='middle_down_right'>
                     <p><strong>dragon_sidewall_angle_deg:</strong> ${dragons_sidewall_angle_deg}</p>
                     <p><strong>dragon_orbit_duration_yr:</strong> ${dragons_orbit_duration_yr}</p>
-                    </section>
-
-                    <section class='middle_down_right'>
                     <p><strong>dragon_dry_mass_kg:</strong> ${dragons_dry_mass_kg}</p>
                     <p><strong>dragon_dry_mass_lb:</strong> ${dragons_dry_mass_lb}</p>
                     <p><strong>thrusters_dragon_type:</strong> ${thrusters_dragons_type}</p>
@@ -194,7 +194,7 @@ const getAllDetailDatadragons = async (landpadId) => {
                     <p><strong>dragon_isp:</strong> ${dragons_isp}</p>
                     <p><strong>dragon_kN:</strong> ${dragons_kN}</p>
                     <p><strong>dragon_lbf:</strong> ${dragons_lbf}</p>
-                    <p><strong>dragon_wikipedia:</strong> ${dragons_wikipedia}</p>
+                    <p><strong>dragon_wikipedia: </strong><a href="${dragons_wikipedia}">wikipedia</a></p>                       
                     <p><strong>dragon_description:</strong> ${dragons_description}</p>
                     <p><strong>dragon_id:</strong> ${dragons_id}</p>
                     <p><strong>trunk_volume_dragons_cubic_meters:</strong> ${trunk_volume_dragons_cubic_meters}</p>

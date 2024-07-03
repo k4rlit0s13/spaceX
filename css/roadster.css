@@ -18,9 +18,11 @@ body {
     align-items: center;
     justify-content: center;
 
-    padding: 20px;
-    position: relative;
-    right: 20px;
+    margin: 10px;
+    padding: 10px;
+
+    background-color: rgb(23, 52, 90);  
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.504);
 }
 
 
@@ -38,6 +40,14 @@ body {
 .left{
     /* background-color: rosybrown; */
     width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(23, 52, 90);  
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.504);
 }
 .left h2{
     margin-bottom: 20px;
@@ -53,6 +63,9 @@ body {
     border-radius: 50%;
     overflow-x: scroll;
     scrollbar-width: none;
+
+    border: solid 3px white;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.504);
 }
 .middle img{
     width: 900px;
@@ -60,6 +73,14 @@ body {
 .right{
     /* background-color: yellowgreen; */
     width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(23, 52, 90);  
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.504);
 }
 .right a{
     color: white;

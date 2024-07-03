@@ -104,8 +104,8 @@ const getAllDetailDataroadsters = async (roadsterId) => {
                         <p><strong>earth_distance_mi:</strong> ${earth_distance_mi}</p>
                         <p><strong>mars_distance_km:</strong> ${mars_distance_km}</p>
                         <p><strong>mars_distance_mi:</strong> ${mars_distance_mi}</p>
-                        <p><strong>wikipedia:</strong><a href="${wikipedia}">wikipedia</a></p>                       
-                        <p><strong>video:</strong> ${video}</p>
+                        <p><strong>wikipedia: </strong><a href="${wikipedia}">wikipedia</a></p>                       
+                        <p><strong>video: </strong><a href="${video}">video</a></p>                       
                         <p><strong>details:</strong> ${details}</p>
                         <p><strong>id:</strong> ${id}</p>
                     </section>

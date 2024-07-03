@@ -82,7 +82,7 @@ const getAllDetailDatahistory = async (historyId) => {
                         <section class='right'>                
                             <h2>${history_title}</h2>
                             <p><strong>history_id:</strong> ${history_id}</p>
-                            <p><strong>links_article_history:</strong> ${links_article_history}</p>
+                            <p><strong>links_article_history: </strong><a href="${links_article_history}">links_article_history</a></p>                       
                             <p><strong>history_event_date_utc:</strong> ${history_event_date_utc}</p>
                             <p><strong>history_event_date_unix:</strong> ${history_event_date_unix}</p>
                             <p><strong>history_details:</strong> ${history_details}</p>

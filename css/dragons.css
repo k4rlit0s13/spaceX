@@ -18,9 +18,11 @@ body {
     align-items: center;
     justify-content: center;
 
-    padding: 20px;
-    position: relative;
-    right: 20px;
+    margin: 10px;
+    padding: 10px;
+
+    background-color: rgb(23, 52, 90);  
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.504);
 }
 
 .main{
@@ -28,6 +30,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    align-items: center;
 
 }
 .left{
@@ -37,9 +41,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;    
+
+    border-radius: 20px;
+    background-color: rgb(23, 52, 90);  
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.504);
 }
 .left h2{
     margin-bottom: 20px;
+    text-align: center;
 }
 .middle{
     /* background-color: orange; */
@@ -52,11 +61,15 @@ body {
 .middle_up img{
     width: 350px;
     border-radius: 100%;
+
+    border: solid 4px white;  
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.504);
 }
 .middle_down{
     /* background-color: yellowgreen; */
     display: flex;
     padding: 20px;
+    gap: 20px;
 }
 .middle_down_left{
     /* background-color: lightblue; */
@@ -64,13 +77,22 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    border-radius: 20px;
+    background-color: rgb(23, 52, 90);  
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.504);
 }
+
 .middle_down_right{
     /* background-color: darkturquoise; */
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    border-radius: 20px;
+    background-color: rgb(23, 52, 90);  
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.504);
 }
 .right{
     /* background-color: navy; */
@@ -79,7 +101,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
+
+    border-radius: 20px;
+    background-color: rgb(23, 52, 90);  
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.504);}
 .right a{
     color: white;
 }
@@ -103,6 +128,7 @@ body {
 
 #buttons-container {
     background-color:rgb(23, 52, 90);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.504);
     border-radius: 20px;
     display: flex;
     flex-direction: row;
